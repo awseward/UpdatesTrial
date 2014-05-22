@@ -8,10 +8,10 @@
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="Manufacturer" Value="AwSwrd"/>
-    <ROW Property="ProductCode" Value="1033:{831B1828-AAD2-4172-BDD5-3B07A780FC11} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{780D1FE4-141A-40D0-9A84-D160020CE24D} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="UpdatesTrial"/>
-    <ROW Property="ProductVersion" Value="0.2" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.3" Type="32"/>
     <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{EE6A187B-4DC6-4C45-809D-73CD351B0E35}"/>
@@ -31,15 +31,19 @@
     <ROW Component="ProductInformation" ComponentId="{D933AC63-5502-404E-A68B-2B3AA1A94809}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
     <ROW Component="SHORTCUTDIR" ComponentId="{CDD02799-0E17-4817-9258-9554235E0E9E}" Directory_="SHORTCUTDIR" Attributes="0"/>
     <ROW Component="UpdatesTrial.exe" ComponentId="{3C714144-36FB-4FB0-B7D4-8100D29A843B}" Directory_="APPDIR" Attributes="0" KeyPath="UpdatesTrial.exe"/>
+    <ROW Component="UpdatesTrial.vshost.exe" ComponentId="{2C3522B3-7454-4C8C-87C2-9C1A40595526}" Directory_="APPDIR" Attributes="0" KeyPath="UpdatesTrial.vshost.exe"/>
+    <ROW Component="UpdatesTrial.vshost.exe.manifest" ComponentId="{78F98AA1-1F65-4EBC-9C95-4696C0BCF5F2}" Directory_="APPDIR" Attributes="0" KeyPath="UpdatesTrial.vshost.exe.manifest" Type="0"/>
     <ROW Component="updater.exe" ComponentId="{A25EADD7-82C8-4B78-8B7D-44E02423C1C4}" Directory_="APPDIR" Attributes="0" KeyPath="updater.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
-    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_ExePath ProductInformation SHORTCUTDIR UpdatesTrial.exe updater.exe"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_ExePath ProductInformation SHORTCUTDIR UpdatesTrial.exe UpdatesTrial.vshost.exe UpdatesTrial.vshost.exe.manifest updater.exe"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
     <ROW File="UpdatesTrial.exe" Component_="UpdatesTrial.exe" FileName="UPDATE~1.EXE|UpdatesTrial.exe" Attributes="0" SourcePath="..\UpdatesTrial\bin\Release\UpdatesTrial.exe" SelfReg="false" NextFile="updater.exe" DigSign="true"/>
-    <ROW File="UpdatesTrial.pdb" Component_="UpdatesTrial.exe" FileName="UPDATE~1.PDB|UpdatesTrial.pdb" Attributes="0" SourcePath="..\UpdatesTrial\bin\Release\UpdatesTrial.pdb" SelfReg="false"/>
+    <ROW File="UpdatesTrial.pdb" Component_="UpdatesTrial.exe" FileName="UPDATE~1.PDB|UpdatesTrial.pdb" Attributes="0" SourcePath="..\UpdatesTrial\bin\Release\UpdatesTrial.pdb" SelfReg="false" NextFile="UpdatesTrial.vshost.exe"/>
+    <ROW File="UpdatesTrial.vshost.exe" Component_="UpdatesTrial.vshost.exe" FileName="UPDATE~2.EXE|UpdatesTrial.vshost.exe" Attributes="0" SourcePath="..\UpdatesTrial\bin\Release\UpdatesTrial.vshost.exe" SelfReg="false" NextFile="UpdatesTrial.vshost.exe.manifest" DigSign="true"/>
+    <ROW File="UpdatesTrial.vshost.exe.manifest" Component_="UpdatesTrial.vshost.exe.manifest" FileName="UPDATE~1.MAN|UpdatesTrial.vshost.exe.manifest" Attributes="0" SourcePath="..\UpdatesTrial\bin\Release\UpdatesTrial.vshost.exe.manifest" SelfReg="false"/>
     <ROW File="updater.exe" Component_="updater.exe" FileName="Updater.exe" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_STUBS&gt;updater.exe" SelfReg="false" NextFile="UpdatesTrial.pdb" DigSign="true"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
@@ -150,7 +154,7 @@
     <ROW IniFile="ApplicationVersion" FileName="Updater.ini" DirProperty="APPDIR" Section="General" Key="ApplicationVersion" Value="[ProductVersion]" Action="0" Component_="updater.exe"/>
     <ROW IniFile="CheckFrequency" FileName="Updater.ini" DirProperty="APPDIR" Section="General" Key="CheckFrequency" Value="2" Action="0" Component_="updater.exe"/>
     <ROW IniFile="CompanyName" FileName="Updater.ini" DirProperty="APPDIR" Section="General" Key="CompanyName" Value="[Manufacturer]" Action="0" Component_="updater.exe"/>
-    <ROW IniFile="DefaultCommandLine" FileName="Updater.ini" DirProperty="APPDIR" Section="General" Key="DefaultCommandLine" Value="/checknow" Action="0" Component_="updater.exe"/>
+    <ROW IniFile="DefaultCommandLine" FileName="Updater.ini" DirProperty="APPDIR" Section="General" Key="DefaultCommandLine" Value="/silentall -nofreqcheck" Action="0" Component_="updater.exe"/>
     <ROW IniFile="DownloadsFolder" FileName="Updater.ini" DirProperty="APPDIR" Section="General" Key="DownloadsFolder" Value="[CommonAppDataFolder][Manufacturer]\[ProductName]\updates\" Action="0" Component_="updater.exe"/>
     <ROW IniFile="Flags" FileName="Updater.ini" DirProperty="APPDIR" Section="General" Key="Flags" Value="PerMachine|ShowConfigOptionsButton" Action="0" Component_="updater.exe"/>
     <ROW IniFile="ID" FileName="Updater.ini" DirProperty="APPDIR" Section="General" Key="ID" Value="[UpgradeCode]" Action="0" Component_="updater.exe"/>
