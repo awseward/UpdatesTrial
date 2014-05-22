@@ -204,7 +204,7 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
     <ROW Shortcut="UninstallProductName" Directory_="SHORTCUTDIR" Name="UNINST~1|Uninstall [|ProductName]" Component_="updater.exe" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
     <ROW Shortcut="UpdatesTrial.exe" Directory_="SHORTCUTDIR" Name="UPDATE~1|[|ProductName]" Component_="UpdatesTrial.exe" Target="[#UpdatesTrial.exe]" Description="Launch [|ProductName]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR" Advertised="true"/>
-    <ROW Shortcut="UpdatesTrial.exe_1" Directory_="DesktopFolder" Name="UPDATE~1.EXE|UpdatesTrial.exe" Component_="UpdatesTrial.exe" Target="[#UpdatesTrial.exe]" Description="UpdatesTrial.exe" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="UpdatesTrial.exe_1" Directory_="DesktopFolder" Name="UPDATE~1|[|ProductName]" Component_="UpdatesTrial.exe" Target="[#UpdatesTrial.exe]" Description="Launches [|ProductName]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR" Advertised="true"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>
