@@ -1,0 +1,8 @@
+# This .gitignore ensures that git maintains an empty bin folder and complains
+# if it is deleted
+
+# Ignore all files in this directory
+*
+
+# Except this one
+!.gitignore
