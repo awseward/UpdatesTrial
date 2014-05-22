@@ -16,8 +16,13 @@
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="HorizontalAlignment" Value="Center" />
         </Style>
+        <Style TargetType="StackPanel">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
     </Window.Resources>
-    <Grid>
+    <StackPanel>
         <TextBlock Text="{Binding VersionString, StringFormat=Version \{0\}}"/>
-    </Grid>
+        <TextBlock Text="Some arbitrary change made in v0.2" FontSize="12" />
+    </StackPanel>
 </Window>
