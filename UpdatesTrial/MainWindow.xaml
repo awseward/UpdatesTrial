@@ -8,8 +8,8 @@
     </Window.DataContext>
     <Window.Resources>
         <Style TargetType="Window">
-            <Setter Property="Background" Value="#f5f5f5" />
-            <Setter Property="Foreground" Value="#363636" />
+            <Setter Property="Background" Value="#363636" />
+            <Setter Property="Foreground" Value="#f0f0f0" />
         </Style>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="30" />
