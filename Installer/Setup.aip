@@ -140,6 +140,9 @@
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIniFileComponent">
     <ROW IniFile="AppDir" FileName="Updater.ini" DirProperty="APPDIR" Section="General" Key="AppDir" Value="[APPDIR]" Action="0" Component_="updater.exe"/>
     <ROW IniFile="ApplicationName" FileName="Updater.ini" DirProperty="APPDIR" Section="General" Key="ApplicationName" Value="[ProductName]" Action="0" Component_="updater.exe"/>
@@ -199,7 +202,8 @@
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="UpdatesTrial.exe" Directory_="SHORTCUTDIR" Name="UPDATE~1.EXE|UpdatesTrial.exe" Component_="UpdatesTrial.exe" Target="[#UpdatesTrial.exe]" Description="UpdatesTrial.exe" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="UninstallProductName" Directory_="SHORTCUTDIR" Name="UNINST~1|Uninstall [|ProductName]" Component_="updater.exe" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
+    <ROW Shortcut="UpdatesTrial.exe" Directory_="SHORTCUTDIR" Name="UPDATE~1|[|ProductName]" Component_="UpdatesTrial.exe" Target="[#UpdatesTrial.exe]" Description="Launch [|ProductName]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR" Advertised="true"/>
     <ROW Shortcut="UpdatesTrial.exe_1" Directory_="DesktopFolder" Name="UPDATE~1.EXE|UpdatesTrial.exe" Component_="UpdatesTrial.exe" Target="[#UpdatesTrial.exe]" Description="UpdatesTrial.exe" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
