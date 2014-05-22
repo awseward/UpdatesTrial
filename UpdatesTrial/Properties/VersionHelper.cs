@@ -10,11 +10,13 @@ namespace UpdatesTrial.Properties
     {
         public static String VersionString
         {
-            get
-            {
-                var assembly = typeof(VersionHelper).Assembly;
-                return FileVersionInfo.GetVersionInfo(assembly.Location).ProductVersion;
-            }
+            get { return GetVersionString(); }
+        }
+
+        private static String GetVersionString()
+        {
+            var assembly = typeof(VersionHelper).Assembly;
+            return FileVersionInfo.GetVersionInfo(assembly.Location).ProductVersion;
         }
     }
 }
