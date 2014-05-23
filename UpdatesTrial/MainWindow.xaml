@@ -20,6 +20,7 @@
     </Window.Resources>
     <StackPanel>
         <TextBlock Text="{Binding VersionString, StringFormat=Version \{0\}}"/>
-        <TextBlock Text="Some arbitrary change made in v0.2" FontSize="12" />
+        <TextBlock Text="This color changed in v0.4" FontSize="12"
+                   Foreground="OrangeRed"/>
     </StackPanel>
 </Window>

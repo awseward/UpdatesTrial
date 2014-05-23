@@ -1,0 +1,18 @@
+;aiu;
+
+[Update]
+Name=UpdatesTrial
+ProductVersion=0.4
+URL=http://www.awswrd.com/download/UpdatesTrial0.4_setup.exe
+Size=1283912
+ReleaseDate=22/05/2014
+MD5=2b9e00072b0e062d64793bccdddb02e8
+ServerFileName=UpdatesTrial0.4_setup.exe
+Flags=Critical
+RegistryKey=HKUD\Software\AwSwrd\UpdatesTrial\Version
+Version=0.4.0.0
+Description=Changes some text color
+Feature=Not really a feature
+Enhancement=Pretty colors
+BugFix=No bug fixes
+AutoCloseApplication=[APPDIR]UpdatesTrial.exe

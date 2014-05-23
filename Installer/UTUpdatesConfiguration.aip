@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="11.2" version="11.2" Modules="update" RootPath="." Language="en" Id="{9F373774-442F-4327-B249-228FABD679FA}">
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;aiu-ue.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;aiu-ue_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.UpdaterEditorComponent">
+    <ROW Section="Update" Key="Name" Value="UpdatesTrial"/>
+    <ROW Section="Update" Key="ProductVersion" Value="0.4"/>
+    <ROW Section="Update" Key="URL" Value="http://www.awswrd.com/download/UpdatesTrial0.4_setup.exe"/>
+    <ROW Section="Update" Key="Size" Value="..\bin\UpdatesTrial0.4_setup.exe"/>
+    <ROW Section="Update" Key="ReleaseDate" Value="17590"/>
+    <ROW Section="Update" Key="MD5" Value="..\bin\UpdatesTrial0.4_setup.exe"/>
+    <ROW Section="Update" Key="ServerFileName" Value="UpdatesTrial0.4_setup.exe"/>
+    <ROW Section="Update" Key="Flags" Value="Critical"/>
+    <ROW Section="Update" Key="RegistryKey" Value="HKUD\Software\AwSwrd\UpdatesTrial\Version"/>
+    <ROW Section="Update" Key="Version" Value="0.4.0.0"/>
+    <ROW Section="Update" Key="Description" Value="Changes some text color"/>
+    <ROW Section="Update" Key="Feature" Value="Not really a feature"/>
+    <ROW Section="Update" Key="Enhancement" Value="Pretty colors"/>
+    <ROW Section="Update" Key="BugFix" Value="No bug fixes"/>
+    <ROW Section="Update" Key="AutoCloseApplication" Value="[APPDIR]UpdatesTrial.exe"/>
+    <ATTRIBUTE name="OutputFileName" value="updates.txt"/>
+    <ATTRIBUTE name="OutputFolder" value="."/>
+  </COMPONENT>
+</DOCUMENT>
