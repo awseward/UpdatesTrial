@@ -9,10 +9,10 @@
     <ROW Property="AiSkipExitDlg" Value="1"/>
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="Manufacturer" Value="AwSwrd"/>
-    <ROW Property="ProductCode" Value="1033:{65B48818-B248-42DF-80CC-21C4CD0AF522} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{515039F3-63F3-4CBF-ACCA-81827A99EBB6} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="UpdatesTrial"/>
-    <ROW Property="ProductVersion" Value="0.3" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.4" Type="32"/>
     <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{8219B759-43FF-408F-85E3-649D17366CF3}"/>
